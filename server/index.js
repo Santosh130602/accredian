@@ -6,7 +6,13 @@ const referralRoutes = require('./routes/referralRoutes');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: JSON.parse(process.env.CORS_ORIGIN),
+    credentials: true,
+    maxAge: 14400,
+  })
+);
 app.use(bodyParser.json());
 
 // Connect to MongoDB
