@@ -33,7 +33,7 @@ const ReferralForm = ({ isOpen, closeModal }) => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.post('https://accredian-zyuz.onrender.com/api/referral', {
+        const response = await axios.post('https://accredian-t1wr.onrender.com/api/referral', {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
